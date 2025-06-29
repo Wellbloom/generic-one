@@ -23,3 +23,8 @@ export const APP_CONFIG = {
     responseTime: "Usually responds within 2 hours",
   },
 } as const;
+
+export const THERAPIST = {
+  name: "Jean Grey",
+  fullName: "Jean Grey",
+} as const;

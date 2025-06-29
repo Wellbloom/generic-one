@@ -1,4 +1,6 @@
-import silviaImage from "@/assets/images/silvia-labra.jpeg";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import doctorImage from "@/assets/images/jean-grey.jpeg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -9,24 +11,22 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sage/20 to-white pt-20">
-      <div className="container mx-auto px-4 py-16">
+    <section className="bg-cream pt-32 pb-20">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-12">
-            <div className="w-48 h-48 mx-auto mb-8 relative animate-fade-in" style={{animationDelay:'0.1s'}}>
-              <img
-                src={silviaImage}
-                alt="Silvia Labra Osuna"
-                className="w-full h-full object-cover rounded-full shadow-lg"
-              />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-forest mb-4 animate-slide-up" style={{animationDelay:'0.25s'}}>
-              Silvia Labra Osuna
-            </h1>
-            <p className="text-xl text-moss/80 mb-8 max-w-2xl mx-auto animate-slide-up" style={{animationDelay:'0.35s'}}>
-              Psychotherapist integrating art, yoga, dance, mindfulness and ayurveda for holistic healing and transformation.
-            </p>
+          <div className="w-72 h-72 mx-auto mb-12 relative animate-fade-in" style={{animationDelay:'0.1s'}}>
+            <img
+              src={doctorImage}
+              alt="Jean Grey"
+              className="w-full h-full rounded-full object-cover shadow-lg object-[center_35%]"
+            />
           </div>
+          <h1 className="text-4xl font-serif font-bold text-center mb-4">
+            Jean Grey
+          </h1>
+          <p className="text-xl text-moss/80 mb-8 max-w-2xl mx-auto animate-slide-up" style={{animationDelay:'0.35s'}}>
+            Psychotherapist integrating art, yoga, dance, mindfulness and ayurveda for holistic healing and transformation.
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay:'0.5s'}}>
             <button

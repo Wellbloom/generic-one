@@ -28,8 +28,8 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { MOCK_DATA } from "@/constants";
-import logoImage from "@/assets/images/silvia-labra-logo.png";
-import silviaProfileImage from "@/assets/images/silvia-labra.jpeg";
+import logoImage from "@/assets/images/jean-grey-logo.png";
+import doctorImage from "@/assets/images/jean-grey.jpeg";
 // Using a standardized mock client profile image from Unsplash
 const clientProfileImage =
   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80";
@@ -203,7 +203,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
   };
 
   // Determine profile image and name based on mode
-  const profileImage = isAdminMode ? silviaProfileImage : clientProfileImage;
+  const profileImage = isAdminMode ? doctorImage : clientProfileImage;
   const displayName = isAdminMode
     ? MOCK_DATA.therapist.name
     : MOCK_DATA.client.name;
@@ -423,7 +423,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
                                   Session Reminder
                                 </p>
                                 <p className="text-sm text-gray-600">
-                                  Your session with Silvia Labra is tomorrow at
+                                  Your session with Jean Grey is tomorrow at
                                   2:00 PM
                                 </p>
                                 <p className="text-xs text-gray-500 mt-1">
@@ -442,7 +442,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
                                   Payment Processed
                                 </p>
                                 <p className="text-sm text-gray-600">
-                                  Your payment of $175 has been processed
+                                  Your payment of $170 has been processed
                                   successfully
                                 </p>
                                 <p className="text-xs text-gray-500 mt-1">
@@ -482,9 +482,9 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
                   <div className="flex items-center space-x-2 cursor-pointer hover:bg-sage/10 rounded-lg px-2 py-1 transition-colors">
                     {/* Profile Image - Using Shay Singh's profile image */}
                     <img
-                      className="w-8 h-8 rounded-full border-2 border-sage/30 object-cover"
-                      src={profileImage}
-                      alt={displayName}
+                      src={doctorImage}
+                      alt="Jean Grey"
+                      className="h-12 w-12 rounded-full object-cover border-2 border-white shadow-md"
                     />
 
                     {/* Username */}

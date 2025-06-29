@@ -61,7 +61,7 @@ const SessionTypeSelector: React.FC<SessionTypeSelectorProps> = ({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Price:</span>
-                  <span className="font-medium text-forest">$79</span>
+                  <span className="font-medium text-forest">$170</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Scheduling:</span>
@@ -105,7 +105,7 @@ const SessionTypeSelector: React.FC<SessionTypeSelectorProps> = ({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Price:</span>
-                  <span className="font-medium text-forest">$79/session</span>
+                  <span className="font-medium text-forest">$150/session</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Scheduling:</span>

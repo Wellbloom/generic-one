@@ -173,9 +173,14 @@ export class PlanManagementService {
     trialSession: number;
     fullSession: number;
   } {
-    return {
+    const SESSION_PRICES = {
       trialSession: 1.0, // $1 trial session
-      fullSession: 175.0, // $175 full session
+      fullSession: 170.0, // $170 full session
+      recurringSession: 150.0, // $150 recurring session
+    };
+    return {
+      trialSession: SESSION_PRICES.trialSession,
+      fullSession: SESSION_PRICES.fullSession,
     };
   }
 

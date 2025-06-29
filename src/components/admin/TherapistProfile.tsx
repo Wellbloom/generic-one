@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MOCK_DATA } from "@/constants";
-import silviaProfileImage from "@/assets/images/silvia-labra.jpeg";
+import doctorImage from "@/assets/images/jean-grey.jpeg";
 
 interface TherapistProfileData {
   firstName: string;
@@ -72,7 +72,7 @@ export default function TherapistProfile() {
       "Mindfulness-Based Stress Reduction (MBSR) Instructor",
     ],
     languages: ["English", "Spanish", "Portuguese"],
-    profileImage: silviaProfileImage,
+    profileImage: doctorImage,
   });
 
   const handleInputChange = (
@@ -92,31 +92,40 @@ export default function TherapistProfile() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
-        <div>
-          <h2 className="text-2xl font-bold text-forest">Therapist Profile</h2>
-          <p className="text-moss/70 dark:text-moss/80">
-            Manage your personal and professional information
-          </p>
+    <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="flex flex-col items-center mb-6">
+        <div className="w-48 h-48 mb-4">
+          <img
+            src={doctorImage}
+            alt="Jean Grey"
+            className="w-full h-full rounded-full object-cover shadow-lg"
+          />
         </div>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+          <div>
+            <h2 className="text-2xl font-bold text-forest">Therapist Profile</h2>
+            <p className="text-moss/70 dark:text-moss/80">
+              Manage your personal and professional information
+            </p>
+          </div>
 
-        <Button
-          onClick={() => (isEditing ? handleSave() : setIsEditing(true))}
-          className="bg-forest hover:bg-moss"
-        >
-          {isEditing ? (
-            <>
-              <Save className="h-4 w-4 mr-2" />
-              Save Changes
-            </>
-          ) : (
-            <>
-              <Edit className="h-4 w-4 mr-2" />
-              Edit Profile
-            </>
-          )}
-        </Button>
+          <Button
+            onClick={() => (isEditing ? handleSave() : setIsEditing(true))}
+            className="bg-forest hover:bg-moss"
+          >
+            {isEditing ? (
+              <>
+                <Save className="h-4 w-4 mr-2" />
+                Save Changes
+              </>
+            ) : (
+              <>
+                <Edit className="h-4 w-4 mr-2" />
+                Edit Profile
+              </>
+            )}
+          </Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

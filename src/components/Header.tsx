@@ -3,7 +3,7 @@ import { Menu, X, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { MOCK_DATA } from "@/constants";
-import logoImage from "@/assets/images/silvia-labra-logo.png";
+import logoImage from "@/assets/images/jean-grey-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,8 +48,8 @@ const Header = () => {
             <a href="/" className="flex items-center">
               <img
                 src={logoImage}
-                alt="Silvia Labra Osuna"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto"
+                alt="Jean Grey"
               />
             </a>
           </div>
