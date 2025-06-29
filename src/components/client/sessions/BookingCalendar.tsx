@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SessionNotifications } from "@/utils/NotificationService";
 import { Clock, User, CreditCard, CheckCircle } from "lucide-react";
+import { PRICING } from "@/constants";
 
 interface BookingCalendarProps {
   onClose: () => void;
@@ -71,7 +72,7 @@ const BookingCalendar = ({
 
       const sessionType = isTrialBooking ? "Trial Session" : "Wellness Session";
       const sessionDuration = isTrialBooking ? "15 minutes" : "60 minutes";
-      const sessionPrice = isTrialBooking ? "Free" : "$79.00";
+      const sessionPrice = isTrialBooking ? "Free" : `$${PRICING.individualSession}.00`;
 
       SessionNotifications.booked(
         sessionType,
@@ -116,7 +117,7 @@ const BookingCalendar = ({
       return {
         title: "Full Session",
         duration: "60 minutes",
-        price: "$79.00",
+        price: `$${PRICING.individualSession}.00`,
         description: "Complete therapeutic session with personalized care",
         platform: "Zoom",
       };

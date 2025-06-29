@@ -1,3 +1,5 @@
+import { tailwindClasses } from "@/styles/colors";
+
 const Pricing = () => {
   return (
     <section id="pricing" className="py-20 bg-sage/10">
@@ -23,15 +25,15 @@ const Pricing = () => {
                 
                 <div className="space-y-3 text-left mb-8">
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     Get to know each other
                   </div>
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     Discuss your goals
                   </div>
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     See if we're a good fit
                   </div>
                 </div>
@@ -45,7 +47,7 @@ const Pricing = () => {
                   Individual Session
                 </h3>
                 <div className="text-4xl font-bold text-forest mb-2">
-                  $79
+                  <span className="text-2xl">$</span>170
                 </div>
                 <p className="text-moss/70 mb-6">
                   60-minute integrative therapy session
@@ -53,19 +55,19 @@ const Pricing = () => {
                 
                 <div className="space-y-3 text-left mb-8">
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     Talk therapy combined with movement
                   </div>
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     Art and creative expression techniques
                   </div>
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     Mindfulness and somatic practices
                   </div>
                   <div className="flex items-center text-moss/80">
-                    <span className="w-2 h-2 bg-sage rounded-full mr-3"></span>
+                    <span className={`w-2 h-2 ${tailwindClasses.primary.bg.replace('hover:bg-orange-dark', '').replace('bg-orange', 'bg-orange')} rounded-full mr-3`}></span>
                     Trauma-informed approach
                   </div>
                 </div>

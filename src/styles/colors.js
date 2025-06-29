@@ -4,7 +4,29 @@
 // Integration: Used throughout the application for consistent visual design
 
 export const colors = {
-  // Primary healing colors
+  // Primary brand colors from logo
+  orange: {
+    light: "hsl(14, 89%, 65%)",
+    DEFAULT: "hsl(14, 89%, 55%)",
+    dark: "hsl(14, 89%, 45%)",
+  },
+  tangerine: {
+    light: "hsl(28, 95%, 65%)",
+    DEFAULT: "hsl(28, 95%, 55%)",
+    dark: "hsl(28, 95%, 45%)",
+  },
+  peach: {
+    light: "hsl(35, 100%, 85%)",
+    DEFAULT: "hsl(35, 100%, 75%)",
+    dark: "hsl(35, 100%, 65%)",
+  },
+  cream: {
+    light: "hsl(40, 33%, 97%)",
+    DEFAULT: "hsl(40, 33%, 94%)",
+    dark: "hsl(40, 33%, 91%)",
+  },
+
+  // Legacy colors (keeping for existing functionality)
   sage: {
     light: "hsl(142, 30%, 85%)",
     DEFAULT: "hsl(142, 30%, 70%)",
@@ -21,7 +43,7 @@ export const colors = {
     dark: "hsl(120, 20%, 65%)",
   },
 
-  // Action colors
+  // Action colors (keeping these for functionality)
   zoom: {
     light: "hsl(210, 100%, 65%)",
     DEFAULT: "hsl(210, 100%, 56%)",
@@ -43,16 +65,58 @@ export const colors = {
     dark: "hsl(0, 70%, 50%)",
   },
 
-  // Semantic colors
-  primary: "hsl(142, 72%, 29%)", // Forest green
-  secondary: "hsl(142, 30%, 85%)", // Sage
-  accent: "hsl(35, 100%, 74%)", // Warm golden
+  // Semantic colors - CHANGE THESE TO UPDATE THE THEME
+  primary: "hsl(14, 89%, 55%)", // Orange - Main brand color
+  secondary: "hsl(28, 95%, 55%)", // Tangerine - Secondary brand color
+  accent: "hsl(35, 100%, 75%)", // Peach - Accent color
 
-  // Status colors
+  // Status colors (keeping these for functionality)
   completed: "hsl(142, 70%, 45%)",
   upcoming: "hsl(210, 100%, 56%)",
   cancelled: "hsl(0, 70%, 55%)",
   rescheduled: "hsl(35, 100%, 65%)",
+};
+
+// Theme configuration - MAIN PLACE TO CHANGE COLORS
+export const theme = {
+  // Primary colors for buttons, headings, and main brand elements
+  primary: {
+    button: colors.orange.DEFAULT,
+    buttonHover: colors.orange.dark,
+    heading: colors.orange.DEFAULT,
+    text: colors.orange.DEFAULT,
+    background: colors.orange.DEFAULT,
+    backgroundLight: `${colors.orange.DEFAULT}/10`,
+  },
+  
+  // Secondary colors for secondary buttons and accents
+  secondary: {
+    button: colors.tangerine.DEFAULT,
+    buttonHover: colors.tangerine.dark,
+    text: colors.tangerine.DEFAULT,
+    background: colors.tangerine.DEFAULT,
+    backgroundLight: `${colors.tangerine.DEFAULT}/10`,
+  },
+
+  // Navigation and interactive elements
+  navigation: {
+    hover: colors.orange.DEFAULT,
+    active: colors.orange.DEFAULT,
+    arrows: colors.orange.DEFAULT,
+  },
+
+  // Backgrounds and gradients
+  background: {
+    hero: `from-${colors.peach.light} to-white`,
+    section: colors.sage.DEFAULT + "/10",
+    card: "white",
+  },
+
+  // Bullet points and small accents
+  accent: {
+    bullet: colors.orange.DEFAULT,
+    badge: colors.orange.DEFAULT + "/90",
+  },
 };
 
 // Color utility functions
@@ -75,6 +139,16 @@ export const getZoomButtonColor = () => colors.zoom.DEFAULT;
 
 // Tailwind class mappings for easy use
 export const tailwindClasses = {
+  primary: {
+    bg: "bg-orange hover:bg-orange-dark",
+    text: "text-orange",
+    border: "border-orange",
+  },
+  secondary: {
+    bg: "bg-tangerine hover:bg-tangerine-dark",
+    text: "text-tangerine",
+    border: "border-tangerine",
+  },
   zoom: {
     bg: "bg-blue-600 hover:bg-blue-700",
     text: "text-blue-600",

@@ -33,6 +33,7 @@ import {
   getTimezoneInfo,
   TimezoneInfo,
 } from "@/utils/TimezoneHelpers";
+import { PRICING } from "@/constants";
 
 interface SessionOption {
   id: string;
@@ -254,9 +255,9 @@ const IndividualSessionBooking = ({
 
                 <div className="text-moss/70">Price (per session)</div>
                 <div className="text-center font-semibold text-green-600">
-                  $70 <span className="text-sm font-normal">(~11% discount)</span>
+                  ${PRICING.recurringSession} <span className="text-sm font-normal">(~12% discount)</span>
                 </div>
-                <div className="text-center font-semibold">$79</div>
+                <div className="text-center font-semibold">${PRICING.individualSession}</div>
 
                 {/* Additional features removed as requested */}
               </div>

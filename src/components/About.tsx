@@ -1,3 +1,5 @@
+import { Brain, HeartPulse, Leaf, Sparkles } from "lucide-react";
+
 const About = () => {
   return (
     <section id="about" className="py-20 bg-white animate-fade-in" style={{animationDelay:'0.2s'}}>

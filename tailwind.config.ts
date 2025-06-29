@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -66,6 +66,31 @@ export default {
         sage: "hsl(142, 30%, 85%)",
         forest: "hsl(142, 72%, 29%)",
         moss: "hsl(120, 25%, 25%)",
+        maroon: {
+          light: "hsl(0, 59%, 45%)",
+          DEFAULT: "hsl(0, 59%, 35%)",
+          dark: "hsl(0, 59%, 25%)",
+        },
+        orange: {
+          light: "hsl(14, 89%, 65%)",
+          DEFAULT: "hsl(14, 89%, 55%)",
+          dark: "hsl(14, 89%, 45%)",
+        },
+        tangerine: {
+          light: "hsl(28, 95%, 65%)",
+          DEFAULT: "hsl(28, 95%, 55%)",
+          dark: "hsl(28, 95%, 45%)",
+        },
+        peach: {
+          light: "hsl(35, 100%, 85%)",
+          DEFAULT: "hsl(35, 100%, 75%)",
+          dark: "hsl(35, 100%, 65%)",
+        },
+        cream: {
+          light: "hsl(40, 33%, 97%)",
+          DEFAULT: "hsl(40, 33%, 94%)",
+          dark: "hsl(40, 33%, 91%)",
+        },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -101,4 +126,6 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+
+export default config;

@@ -38,6 +38,7 @@ import {
 import { RecurringSessionsSetup } from "./setup";
 import TherapeuticFrameViewer from "../../TherapeuticFrameViewer";
 import { tailwindClasses } from "@/styles/colors";
+import { PRICING } from "@/constants";
 
 interface RecurringSessionsSubscription {
   id: string;
@@ -723,7 +724,7 @@ const RecurringSessionsDashboard: React.FC<RecurringSessionsDashboardProps> = ({
                   </div>
                   <div className="text-center pt-4 border-t border-sage/30">
                     <p className="text-sm text-moss/70">
-                      Average cost per session: $79
+                      Average cost per session: ${PRICING.recurringSession}
                     </p>
                   </div>
                 </div>

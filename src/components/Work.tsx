@@ -5,6 +5,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { tailwindClasses } from "@/styles/colors";
 
 const Work = () => {
   const [currentCategory, setCurrentCategory] = useState("All");
@@ -278,8 +279,8 @@ const Work = () => {
                 onClick={() => setCurrentCategory(category)}
                 className={`px-5 py-2 rounded-full transition-all duration-200 font-medium text-sm ${
                   currentCategory === category
-                    ? "bg-forest text-white shadow-lg"
-                    : "bg-white text-moss border border-sage/30 hover:bg-sage/20 hover:border-sage/50"
+                    ? `${tailwindClasses.primary.bg.replace('hover:', '')} text-white shadow-lg`
+                    : `bg-white text-moss border border-sage/30 hover:bg-orange/10 hover:${tailwindClasses.primary.border.replace('border-', 'border-')}/50`
                 }`}
               >
                 {category}
@@ -295,14 +296,14 @@ const Work = () => {
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-200 hover:scale-110"
               aria-label="Scroll left"
             >
-              <ChevronLeft className="w-5 h-5 text-forest" />
+              <ChevronLeft className={`w-5 h-5 ${tailwindClasses.primary.text}`} />
             </button>
             <button
               onClick={() => scrollContainer("right")}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-200 hover:scale-110"
               aria-label="Scroll right"
             >
-              <ChevronRight className="w-5 h-5 text-forest" />
+              <ChevronRight className={`w-5 h-5 ${tailwindClasses.primary.text}`} />
             </button>
 
             {/* Scrollable Work Cards */}
@@ -327,7 +328,7 @@ const Work = () => {
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-forest/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className={`bg-orange/90 text-white px-3 py-1 rounded-full text-sm font-medium`}>
                         {work.category}
                       </span>
                     </div>
@@ -349,7 +350,7 @@ const Work = () => {
                       {work.excerpt}
                     </p>
 
-                    <button className="flex items-center text-forest hover:text-moss transition-colors duration-200 font-medium group">
+                    <button className={`flex items-center ${tailwindClasses.primary.text} hover:text-orange-dark transition-colors duration-200 font-medium group`}>
                       Read More
                       <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                     </button>
@@ -371,7 +372,7 @@ const Work = () => {
                   .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="bg-forest text-white px-8 py-3 rounded-full hover:bg-moss transition-all duration-200 shadow-lg font-medium"
+              className={`${tailwindClasses.primary.bg} text-white px-8 py-3 rounded-full transition-all duration-200 shadow-lg font-medium`}
             >
               Start Your Journey
             </button>

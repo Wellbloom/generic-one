@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ClientDetailsModal } from "@/components/admin/clients";
 import { SessionActionsModal } from "@/components/admin/sessions";
+import { PRICING } from "@/constants";
 
 // Simplified admin session data structure
 interface AdminSession {
@@ -57,7 +58,7 @@ const AdminUpcomingSessions: React.FC<AdminUpcomingSessionsProps> = ({
       date: new Date().toISOString().split("T")[0], // Today
       time: "2:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       paymentStatus: getPaymentStatusForSession(
         new Date().toISOString().split("T")[0]
       ),
@@ -75,7 +76,7 @@ const AdminUpcomingSessions: React.FC<AdminUpcomingSessionsProps> = ({
         .split("T")[0], // Tomorrow
       time: "10:00 AM",
       duration: "90 minutes",
-      sessionFee: "$200.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       paymentStatus: getPaymentStatusForSession(
         new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().split("T")[0]
       ),
@@ -93,7 +94,7 @@ const AdminUpcomingSessions: React.FC<AdminUpcomingSessionsProps> = ({
         .split("T")[0], // In 3 days
       time: "4:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       paymentStatus: getPaymentStatusForSession(
         new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)
           .toISOString()

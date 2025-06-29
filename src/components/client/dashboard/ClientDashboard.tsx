@@ -47,7 +47,7 @@ import DashboardHeader from "@/components/DashboardHeader";
 import { PlanType } from "@/types/PlanManagementTypes";
 import { tailwindClasses } from "@/styles/colors";
 import { SessionNotifications } from "@/utils/NotificationService";
-import { MOCK_DATA } from "@/constants";
+import { MOCK_DATA, PRICING } from "@/constants";
 
 // Client session data structure
 interface ClientSession {

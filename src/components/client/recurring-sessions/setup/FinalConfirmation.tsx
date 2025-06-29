@@ -30,6 +30,7 @@ import {
   PaymentMethodInfo,
   TherapeuticFrameAgreement,
 } from "@/types/PayAsYouGoTypes";
+import { PRICING } from "@/constants";
 
 interface RecurringSchedule {
   id: string;
@@ -119,7 +120,7 @@ const PayAsYouGoFinalConfirmation: React.FC<
             </div>
             <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg">
               <DollarSign className="h-8 w-8 text-forest mx-auto mb-2" />
-              <p className="text-2xl font-bold text-forest">$70</p>
+              <p className="text-2xl font-bold text-forest">${PRICING.recurringSession}</p>
               <p className="text-sm text-moss/70">Per session</p>
             </div>
             <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg">
@@ -403,7 +404,7 @@ const PayAsYouGoFinalConfirmation: React.FC<
                       {formatTime(schedule.timeSlot)}
                     </span>
                     <span className="font-medium">
-                      $70 on {chargeDate.toLocaleDateString()}
+                      ${PRICING.recurringSession} on {chargeDate.toLocaleDateString()}
                     </span>
                   </li>
                 );
@@ -425,7 +426,7 @@ const PayAsYouGoFinalConfirmation: React.FC<
             </p>
             <ul className="list-disc list-inside space-y-1 text-sm text-yellow-700">
               <li>
-                <strong>Billing:</strong> $70 charged 48 hours before each
+                <strong>Billing:</strong> ${PRICING.recurringSession} charged 48 hours before each
                 session • Email confirmations sent
               </li>
               <li>

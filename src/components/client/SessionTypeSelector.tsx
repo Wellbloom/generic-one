@@ -12,6 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { PRICING } from "@/constants";
 
 interface SessionTypeSelectorProps {
   isOpen: boolean;
@@ -61,7 +62,7 @@ const SessionTypeSelector: React.FC<SessionTypeSelectorProps> = ({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Price:</span>
-                  <span className="font-medium text-forest">$170</span>
+                  <span className="font-medium text-forest">${PRICING.individualSession}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Scheduling:</span>
@@ -105,7 +106,7 @@ const SessionTypeSelector: React.FC<SessionTypeSelectorProps> = ({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Price:</span>
-                  <span className="font-medium text-forest">$150/session</span>
+                  <span className="font-medium text-forest">${PRICING.recurringSession}/session</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-moss/70">Scheduling:</span>

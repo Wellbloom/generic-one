@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { tailwindClasses } from "@/styles/colors";
 
 const Testimonials = () => {
   const testimonials = [
@@ -7,7 +8,7 @@ const Testimonials = () => {
       age: 32,
       location: "San Francisco, CA",
       content:
-        "Silvia's integrative approach helped me heal from postpartum depression in ways I never imagined. The combination of talk therapy with movement allowed me to express feelings I couldn't put into words.",
+        "Jean's integrative approach helped me heal from postpartum depression in ways I never imagined. The combination of talk therapy with movement allowed me to express feelings I couldn't put into words.",
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
       rating: 5,
@@ -18,7 +19,7 @@ const Testimonials = () => {
       age: 45,
       location: "Oakland, CA",
       content:
-        "After years of traditional therapy for PTSD, Silvia's trauma-informed approach with meditation and somatic work has been life-changing. I sleep better and feel more connected.",
+        "After years of traditional therapy for PTSD, Jean's trauma-informed approach with meditation and somatic work has been life-changing. I sleep better and feel more connected.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
       rating: 5,
@@ -51,7 +52,7 @@ const Testimonials = () => {
       age: 41,
       location: "Hayward, CA",
       content:
-        "Silvia's mindfulness techniques have become essential tools in managing my anxiety. Her gentle guidance helped me find peace I never thought possible.",
+        "Jean's mindfulness techniques have become essential tools in managing my anxiety. Her gentle guidance helped me find peace I never thought possible.",
       image:
         "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
       rating: 5,
@@ -62,7 +63,7 @@ const Testimonials = () => {
       age: 35,
       location: "Newark, CA",
       content:
-        "Working with Silvia transformed my relationship with my body after a sports injury. The movement therapy helped me rebuild not just physically, but emotionally too.",
+        "Working with Jean transformed my relationship with my body after a sports injury. The movement therapy helped me rebuild not just physically, but emotionally too.",
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
       rating: 5,
@@ -84,7 +85,7 @@ const Testimonials = () => {
       age: 52,
       location: "Castro Valley, CA",
       content:
-        "After losing my spouse, I thought I'd never find peace again. Silvia's compassionate approach and trauma-informed techniques helped me process my grief with dignity.",
+        "After losing my spouse, I thought I'd never find peace again. Jean's compassionate approach and trauma-informed techniques helped me process my grief with dignity.",
       image:
         "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?auto=format&fit=crop&w=400&q=80",
       rating: 5,
@@ -129,14 +130,14 @@ const Testimonials = () => {
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-200 hover:scale-110"
               aria-label="Scroll left"
             >
-              <ChevronLeft className="w-5 h-5 text-forest" />
+              <ChevronLeft className={`w-5 h-5 ${tailwindClasses.primary.text}`} />
             </button>
             <button
               onClick={() => scrollContainer("right")}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-200 hover:scale-110"
               aria-label="Scroll right"
             >
-              <ChevronRight className="w-5 h-5 text-forest" />
+              <ChevronRight className={`w-5 h-5 ${tailwindClasses.primary.text}`} />
             </button>
 
             {/* Scrollable Testimonial Cards */}
@@ -207,7 +208,7 @@ const Testimonials = () => {
                   .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="bg-forest text-white px-8 py-3 rounded-full hover:bg-moss transition-all duration-200 shadow-lg font-medium"
+              className={`${tailwindClasses.primary.bg} text-white px-8 py-3 rounded-full transition-all duration-200 shadow-lg font-medium`}
             >
               Book Your Trial Session
             </button>

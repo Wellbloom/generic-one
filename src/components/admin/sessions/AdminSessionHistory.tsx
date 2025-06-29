@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { PRICING } from "@/constants";
 
 // Admin session history data structure
 interface AdminSessionHistory {
@@ -66,7 +67,7 @@ const AdminSessionHistory: React.FC<AdminSessionHistoryProps> = ({
       date: "2025-06-15",
       time: "2:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       sessionType: "Regular Session",
       status: "completed",
       paymentStatus: "paid",
@@ -102,7 +103,7 @@ const AdminSessionHistory: React.FC<AdminSessionHistoryProps> = ({
       date: "2025-06-12",
       time: "4:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       sessionType: "Regular Session",
       status: "completed",
       paymentStatus: "paid",
@@ -138,7 +139,7 @@ const AdminSessionHistory: React.FC<AdminSessionHistoryProps> = ({
       date: "2025-06-11",
       time: "3:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       sessionType: "Regular Session",
       status: "no-show",
       paymentStatus: "paid",
@@ -156,7 +157,7 @@ const AdminSessionHistory: React.FC<AdminSessionHistoryProps> = ({
       date: "2025-06-10",
       time: "1:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       sessionType: "Regular Session",
       status: "completed",
       paymentStatus: "paid",
@@ -174,7 +175,7 @@ const AdminSessionHistory: React.FC<AdminSessionHistoryProps> = ({
       date: "2025-06-09",
       time: "5:00 PM",
       duration: "60 minutes",
-      sessionFee: "$79.00",
+      sessionFee: `$${PRICING.individualSession}.00`,
       sessionType: "Regular Session",
       status: "completed",
       paymentStatus: "paid",

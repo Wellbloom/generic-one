@@ -28,3 +28,9 @@ export const THERAPIST = {
   name: "Jean Grey",
   fullName: "Jean Grey",
 } as const;
+
+export const PRICING = {
+  individualSession: 170,
+  recurringSession: 150,
+  trialSession: 1,
+} as const;
