@@ -45,14 +45,14 @@ const BookingCalendar = ({
 
   const handleDateSelect = (date: Date | undefined) => {
     setSelectedDate(date);
-    if (date && selectedTime) {
-      setShowForm(true);
-    }
   };
 
   const handleTimeSelect = (time: string) => {
     setSelectedTime(time);
-    if (selectedDate && time) {
+  };
+
+  const handleBookNowClick = () => {
+    if (selectedDate && selectedTime) {
       setShowForm(true);
     }
   };
@@ -278,6 +278,16 @@ const BookingCalendar = ({
               Via {sessionInfo.platform}
             </span>
           </div>
+        </div>
+
+        <div className="mt-6 flex justify-end">
+          <Button
+            onClick={handleBookNowClick}
+            className="bg-forest hover:bg-moss text-white px-8"
+            disabled={!selectedDate || !selectedTime}
+          >
+            Book Now
+          </Button>
         </div>
       </div>
     </div>
