@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { tailwindClasses } from "@/styles/colors";
+import clientAvatar from "@/assets/images/client-avatar.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -9,8 +10,7 @@ const Testimonials = () => {
       location: "San Francisco, CA",
       content:
         "Jean's integrative approach helped me heal from postpartum depression in ways I never imagined. The combination of talk therapy with movement allowed me to express feelings I couldn't put into words.",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+      image: clientAvatar,
       rating: 5,
       sessionType: "Dance & Movement Therapy",
     },

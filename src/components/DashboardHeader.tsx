@@ -30,9 +30,9 @@ import { Badge } from "@/components/ui/badge";
 import { MOCK_DATA } from "@/constants";
 import logoImage from "@/assets/images/jean-grey-logo.png";
 import doctorImage from "@/assets/images/jean-grey.jpeg";
-// Using a standardized mock client profile image from Unsplash
-const clientProfileImage =
-  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80";
+import clientAvatar from "@/assets/images/client-avatar.png";
+// Using our local client avatar image
+const clientProfileImage = clientAvatar;
 import { useState } from "react";
 
 interface DashboardHeaderProps {

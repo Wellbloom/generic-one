@@ -166,12 +166,6 @@ const Header = () => {
                     Pricing
                   </button>
                   <button
-                    onClick={handleBookTrial}
-                    className={`${tailwindClasses.primary.bg} text-white px-6 py-2 rounded-full transition-colors duration-200 text-center`}
-                  >
-                    Book Trial Session
-                  </button>
-                  <button
                     onClick={handleAuth}
                     className={`flex items-center gap-2 text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200`}
                   >
