@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
-import LoginModal from "@/components/auth/LoginModal";
+import LoginPage from "@/components/auth/LoginPage";
 
 const Auth = () => {
   const navigate = useNavigate();
   const { user, loading } = useAuth();
-  const [showLogin, setShowLogin] = useState(true);
 
   useEffect(() => {
     // If user is already authenticated, redirect to dashboard
@@ -15,21 +14,20 @@ const Auth = () => {
     }
   }, [user, loading, navigate]);
 
-  // If still loading, show nothing (to prevent flash of login modal)
+  // If still loading, show a simple loading state
   if (loading) {
-    return null;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
-  // If not authenticated, show login modal
-  return (
-    <LoginModal
-      isOpen={showLogin}
-      onClose={() => {
-        setShowLogin(false);
-        navigate("/");
-      }}
-    />
-  );
+  // If not authenticated, show the login page
+  return <LoginPage />;
 };
 
 export default Auth;
