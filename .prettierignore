@@ -1,0 +1,39 @@
+# Filename: .prettierignore
+# Role: Specifies files and directories to exclude from Prettier formatting
+# Purpose: Prevents formatting of generated files, build outputs, and other non-source files
+# Integration: Used by Prettier CLI and editor integrations
+
+# Build outputs
+dist/
+build/
+out/
+
+# Dependencies
+node_modules/
+
+# Generated files
+*.gen.ts
+*.generated.ts
+*.d.ts
+
+# Config files that should maintain specific formatting
+package-lock.json
+yarn.lock
+bun.lockb
+
+# Documentation
+*.md
+
+# Environment files
+.env*
+
+# Logs
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db 

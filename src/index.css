@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nature-inspired healing color palette */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 142 72% 29%; /* Forest green */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 45 29% 97%; /* Warm white */
+    --secondary-foreground: 142 72% 29%;
+
+    --muted: 142 30% 95%; /* Soft sage */
+    --muted-foreground: 142 30% 40%;
+
+    --accent: 35 100% 74%; /* Warm golden */
+    --accent-foreground: 142 72% 29%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 142 30% 90%;
+    --input: 142 30% 90%;
+    --ring: 142 72% 29%;
+
+    --radius: 0.5rem;
+
+    /* Custom healing colors - Light Mode */
+    --sage: 142 30% 85%;
+    --forest: 142 72% 29%;
+    --moss: 120 25% 25%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 72% 45%; /* Lighter forest for dark mode */
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 35 100% 65%; /* Slightly darker golden for dark mode */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142 72% 45%;
+
+    /* Custom healing colors - Dark Mode */
+    --sage: 142 25% 45%;
+    --forest: 142 45% 55%;
+    --moss: 120 20% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-sage {
+    color: hsl(var(--sage));
+  }
+
+  .text-forest {
+    color: hsl(var(--forest));
+  }
+
+  .text-moss {
+    color: hsl(var(--moss));
+  }
+
+  .bg-sage {
+    background-color: hsl(var(--sage));
+  }
+
+  .bg-forest {
+    background-color: hsl(var(--forest));
+  }
+
+  .bg-moss {
+    background-color: hsl(var(--moss));
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Adding global animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* Allow custom delay via utility like delay-[ms] using inline style */
