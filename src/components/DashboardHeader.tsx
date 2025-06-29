@@ -237,7 +237,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
               <a href="/" className="flex items-center">
                 <img
                   src={logoImage}
-                  alt="Silvia Labra Osuna"
+                  alt="Jean Grey"
                   className="h-16 w-auto object-contain"
                 />
               </a>
@@ -287,7 +287,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
               <a href="/" className="flex items-center">
                 <img
                   src={logoImage}
-                  alt="Silvia Labra Osuna"
+                  alt="Jean Grey"
                   className="h-16 w-auto object-contain"
                 />
               </a>
@@ -480,10 +480,10 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <div className="flex items-center space-x-2 cursor-pointer hover:bg-sage/10 rounded-lg px-2 py-1 transition-colors">
-                    {/* Profile Image - Using Shay Singh's profile image */}
+                    {/* Profile Image */}
                     <img
-                      src={doctorImage}
-                      alt="Jean Grey"
+                      src={profileImage}
+                      alt={displayName}
                       className="h-12 w-12 rounded-full object-cover border-2 border-white shadow-md"
                     />
 

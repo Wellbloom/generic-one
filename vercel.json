@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/jean-grey", "destination": "/" },
+    { "source": "/jean-grey/(.*)", "destination": "/$1" }
+  ],
+  "env": {
+    "VITE_APP_TITLE": "Jean Grey - Integrative Psychotherapist",
+    "VITE_APP_ENV": "production",
+    "VITE_APP_BASE_URL": "https://www.wellbloom.org/jean-grey"
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
+} 

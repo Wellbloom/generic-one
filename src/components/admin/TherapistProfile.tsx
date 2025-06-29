@@ -40,8 +40,8 @@ interface TherapistProfileData {
 export default function TherapistProfile() {
   const [isEditing, setIsEditing] = useState(false);
   const [profileData, setProfileData] = useState<TherapistProfileData>({
-    firstName: "Silvia",
-    lastName: "Labra Osuna",
+    firstName: "Jean",
+    lastName: "Grey",
     email: "wellbloom@jean-grey.com",
     phone: "(555) 123-4567",
     location: "San Francisco, CA",

@@ -6,8 +6,8 @@
 // Mock data for consistent naming throughout the app
 export const MOCK_DATA = {
   therapist: {
-    name: "Silvia Labra",
-    fullName: "Silvia Labra Osuna",
+    name: "Jean Grey",
+    fullName: "Jean Grey",
   },
   client: {
     name: "Sam Arondekar",
