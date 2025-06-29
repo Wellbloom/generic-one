@@ -14,7 +14,28 @@ const Index = () => {
     console.log("🏠 [DEBUG] Loading main page components...");
 
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen relative">
+        {/* Cyclic Background Gradient */}
+        <div className="fixed inset-0 -z-10 bg-gradient-to-b from-orange/20 via-orange/5 to-white"></div>
+        <div 
+          className="fixed inset-0 -z-10" 
+          style={{
+            background: `
+              linear-gradient(
+                to bottom,
+                rgba(255, 165, 0, 0.15) 0%,
+                rgba(255, 200, 100, 0.08) 15%,
+                rgba(255, 255, 255, 0) 30%,
+                rgba(255, 255, 255, 1) 45%,
+                rgba(255, 255, 255, 1) 55%,
+                rgba(255, 200, 100, 0.05) 70%,
+                rgba(255, 165, 0, 0.12) 85%,
+                rgba(255, 140, 0, 0.18) 100%
+              )
+            `
+          }}
+        ></div>
+        
         <Header />
         <Hero />
         <About />

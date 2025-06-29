@@ -253,15 +253,15 @@ const Work = () => {
   };
 
   return (
-    <section
-      id="work"
-      className="py-20 bg-gradient-to-br from-white to-sage/10"
-    >
+          <section
+        id="work"
+        className="py-20"
+      >
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-r from-orange to-tangerine bg-clip-text text-transparent mb-6">
               My Therapeutic Work
             </h2>
             <p className="text-lg text-moss/80 leading-relaxed max-w-3xl mx-auto mb-8">
@@ -342,7 +342,7 @@ const Work = () => {
                       <span>{work.readTime}</span>
                     </div>
 
-                    <h3 className="text-xl font-serif font-bold text-forest mb-3 line-clamp-2">
+                    <h3 className="text-xl font-serif font-bold bg-gradient-to-r from-orange to-orange-dark bg-clip-text text-transparent mb-3 line-clamp-2">
                       {work.title}
                     </h3>
 

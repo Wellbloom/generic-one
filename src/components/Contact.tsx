@@ -41,10 +41,10 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-r from-orange to-tangerine bg-clip-text text-transparent mb-8 text-center">
               Get Started
             </h2>
             <p className="text-center text-moss/80 mb-12">
@@ -55,14 +55,14 @@ const Contact = () => {
             <div className="text-center mb-8">
               <button
                 onClick={() => setShowBooking(true)}
-                className="bg-forest text-white px-8 py-4 rounded-lg hover:bg-moss transition-colors text-lg font-medium shadow-lg"
+                className="bg-gradient-to-r from-orange to-orange-dark text-white px-8 py-4 rounded-lg hover:from-orange-dark hover:to-tangerine transition-all duration-300 text-lg font-medium shadow-lg transform hover:scale-105"
               >
                 Book Trial Session - Free
               </button>
             </div>
 
             <div className="bg-sage/20 rounded-2xl p-8 mb-8">
-              <h3 className="text-lg font-semibold text-forest mb-4 text-center">
+              <h3 className="text-lg font-semibold bg-gradient-to-r from-orange to-orange-dark bg-clip-text text-transparent mb-4 text-center">
                 Or send me a message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -73,7 +73,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="w-full px-4 py-3 border border-sage rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-sage rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent outline-none"
                   />
                 </div>
                 <div>
@@ -83,7 +83,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your email"
-                    className="w-full px-4 py-3 border border-sage rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-sage rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent outline-none"
                   />
                 </div>
                 <div>
@@ -93,12 +93,12 @@ const Contact = () => {
                     onChange={handleChange}
                     rows={4}
                     placeholder="Tell me what brings you here..."
-                    className="w-full px-4 py-3 border border-sage rounded-lg focus:ring-2 focus:ring-forest focus:border-transparent outline-none resize-none"
+                    className="w-full px-4 py-3 border border-sage rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent outline-none resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-forest text-white py-3 rounded-lg hover:bg-moss transition-colors"
+                  className="w-full bg-gradient-to-r from-orange to-orange-dark text-white py-3 rounded-lg hover:from-orange-dark hover:to-tangerine transition-all duration-300"
                 >
                   Send Message
                 </button>
@@ -106,7 +106,7 @@ const Contact = () => {
             </div>
 
             <div className="text-moss/70 text-sm space-y-1 text-center">
-              <p>📧 heal@silvialabra.com</p>
+              <p>📧 wellbloom@jean-grey.com</p>
               <p>📞 (555) 123-4567</p>
               <p>📍 Union City, California</p>
             </div>

@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-peach-light to-white pt-32 pb-20">
+    <section className="pt-32 pb-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-72 h-72 mx-auto mb-12 relative animate-fade-in" style={{animationDelay:'0.1s'}}>

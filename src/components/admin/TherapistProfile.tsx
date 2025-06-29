@@ -42,7 +42,7 @@ export default function TherapistProfile() {
   const [profileData, setProfileData] = useState<TherapistProfileData>({
     firstName: "Silvia",
     lastName: "Labra Osuna",
-    email: "heal@silvialabra.com",
+    email: "wellbloom@jean-grey.com",
     phone: "(555) 123-4567",
     location: "San Francisco, CA",
     timezone: "Pacific Time (PT)",

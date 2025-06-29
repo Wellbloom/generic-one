@@ -105,16 +105,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section
-      id="testimonials"
-      className="py-20 bg-gradient-to-br from-sage/10 to-white"
-    >
+    <section id="testimonials" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest mb-6">
-              Client Stories
+            <h2 className="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-r from-orange to-tangerine bg-clip-text text-transparent mb-6">
+              My Client Stories
             </h2>
             <p className="text-lg text-moss/80 leading-relaxed max-w-3xl mx-auto mb-8">
               Real experiences from clients who have found healing through our
@@ -163,7 +160,7 @@ const Testimonials = () => {
                         className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-sage/20"
                       />
                       <div>
-                        <p className="font-semibold text-forest text-lg">
+                        <p className="font-semibold bg-gradient-to-r from-orange to-orange-dark bg-clip-text text-transparent text-lg">
                           {testimonial.name}
                         </p>
                         <p className="text-moss/60 text-sm">

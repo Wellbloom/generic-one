@@ -2,21 +2,21 @@ import { tailwindClasses } from "@/styles/colors";
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-20 bg-sage/10">
+    <section id="pricing" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-forest mb-8">
-            Investment in Your Healing
+          <h2 className="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-r from-orange to-tangerine bg-clip-text text-transparent mb-6">
+            Investment in Your Health & Healing
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             {/* Trial Session */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-sage/30 border-2 border-forest">
               <div className="text-center">
-                <h3 className="text-xl font-semibold text-forest mb-4">
+                <h3 className="text-xl font-semibold bg-gradient-to-r from-orange to-orange-dark bg-clip-text text-transparent mb-4">
                   Trial Session
                 </h3>
-                <div className="text-4xl font-bold text-forest mb-2">
+                <div className="text-4xl font-bold bg-gradient-to-r from-orange to-tangerine bg-clip-text text-transparent mb-2">
                   Free
                 </div>
                 <p className="text-moss/70 mb-6">
@@ -43,10 +43,10 @@ const Pricing = () => {
             {/* Full Session */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-sage/30">
               <div className="text-center">
-                <h3 className="text-xl font-semibold text-forest mb-4">
+                <h3 className="text-xl font-semibold bg-gradient-to-r from-orange to-orange-dark bg-clip-text text-transparent mb-4">
                   Individual Session
                 </h3>
-                <div className="text-4xl font-bold text-forest mb-2">
+                <div className="text-4xl font-bold bg-gradient-to-r from-orange to-tangerine bg-clip-text text-transparent mb-2">
                   <span className="text-2xl">$</span>170
                 </div>
                 <p className="text-moss/70 mb-6">
