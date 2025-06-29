@@ -1,14 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import doctorImage from "@/assets/images/jean-grey.jpeg";
 import { tailwindClasses } from "@/styles/colors";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+
+    const headerEl = document.querySelector("header");
+    const headerHeight = headerEl ? (headerEl as HTMLElement).offsetHeight : 0;
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementTop - headerHeight + 48;
+
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  };
+
+  const handleBookTrial = () => {
+    scrollToSection("contact");
+  };
+
+  const handleLearnMore = () => {
+    scrollToSection("about");
   };
 
   return (
@@ -30,19 +42,19 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay:'0.5s'}}>
             <Button
-              asChild
+              onClick={handleBookTrial}
               size="lg"
               className={`${tailwindClasses.primary.bg} text-white transition-colors`}
             >
-              <Link to="/book-trial">Book Trial Session</Link>
+              Book Trial Session
             </Button>
             <Button
-              asChild
+              onClick={handleLearnMore}
               variant="outline"
               size="lg"
               className={`${tailwindClasses.secondary.border} ${tailwindClasses.secondary.text} hover:bg-tangerine/10 transition-colors`}
             >
-              <Link to="/about">Learn More</Link>
+              Learn More
             </Button>
           </div>
         </div>

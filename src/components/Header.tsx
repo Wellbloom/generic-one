@@ -43,6 +43,10 @@ const Header = () => {
     navigate("/dashboard");
   };
 
+  const handleBookTrial = () => {
+    scrollToSection("contact");
+  };
+
   return (
     <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-peach">
       <div className="container mx-auto px-4">
@@ -56,29 +60,66 @@ const Header = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/about" className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}>
-              About
-            </Link>
-            <Link to="/work" className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}>
-              Work
-            </Link>
-            <Link to="/testimonials" className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}>
-              Testimonials
-            </Link>
-            <Link to="/pricing" className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}>
-              Pricing
-            </Link>
-            <Button asChild size="sm" className={`${tailwindClasses.primary.bg} text-white transition-colors`}>
-              <Link to="/book-trial">Book Trial Session</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className={`${tailwindClasses.secondary.border} ${tailwindClasses.secondary.text} hover:bg-tangerine/10 transition-colors`}
+            <button
+              onClick={() => scrollToSection("about")}
+              className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}
             >
-              <Link to="/login">Login</Link>
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("work")}
+              className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}
+            >
+              Work
+            </button>
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}
+            >
+              Testimonials
+            </button>
+            <button
+              onClick={() => scrollToSection("pricing")}
+              className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors`}
+            >
+              Pricing
+            </button>
+            <Button
+              onClick={handleBookTrial}
+              size="sm"
+              className={`${tailwindClasses.primary.bg} text-white transition-colors`}
+            >
+              Book Trial Session
             </Button>
+            {user ? (
+              <div className="flex items-center space-x-4">
+                <Button
+                  onClick={handleDashboard}
+                  variant="outline"
+                  size="sm"
+                  className={`${tailwindClasses.secondary.border} ${tailwindClasses.secondary.text} hover:bg-tangerine/10 transition-colors`}
+                >
+                  Dashboard
+                </Button>
+                <Button
+                  onClick={handleAuth}
+                  variant="outline"
+                  size="sm"
+                  className="border-red-300 text-red-600 hover:bg-red-50 transition-colors"
+                >
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <Button
+                onClick={handleAuth}
+                variant="outline"
+                size="sm"
+                className={`${tailwindClasses.secondary.border} ${tailwindClasses.secondary.text} hover:bg-tangerine/10 transition-colors`}
+              >
+                Login
+              </Button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,32 +143,37 @@ const Header = () => {
                 <>
                   <button
                     onClick={() => scrollToSection("about")}
-                    className="text-moss hover:text-forest transition-colors duration-200 text-left"
+                    className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200 text-left`}
                   >
                     About
                   </button>
                   <button
                     onClick={() => scrollToSection("work")}
-                    className="text-moss hover:text-forest transition-colors duration-200 text-left"
+                    className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200 text-left`}
                   >
                     Work
                   </button>
                   <button
                     onClick={() => scrollToSection("testimonials")}
-                    className="text-moss hover:text-forest transition-colors duration-200 text-left"
+                    className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200 text-left`}
                   >
                     Testimonials
                   </button>
                   <button
                     onClick={() => scrollToSection("pricing")}
-                    className="text-moss hover:text-forest transition-colors duration-200 text-left"
+                    className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200 text-left`}
                   >
                     Pricing
                   </button>
-
+                  <button
+                    onClick={handleBookTrial}
+                    className={`${tailwindClasses.primary.bg} text-white px-6 py-2 rounded-full transition-colors duration-200 text-center`}
+                  >
+                    Book Trial Session
+                  </button>
                   <button
                     onClick={handleAuth}
-                    className="flex items-center gap-2 text-moss hover:text-forest transition-colors duration-200"
+                    className={`flex items-center gap-2 text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200`}
                   >
                     <User className="w-4 h-4" />
                     Login
@@ -135,18 +181,18 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <span className="text-moss">
+                  <span className="text-gray-600">
                     Welcome back {MOCK_DATA.client.firstName}!
                   </span>
                   <button
                     onClick={handleDashboard}
-                    className="text-moss hover:text-forest transition-colors duration-200 text-left"
+                    className={`text-gray-600 hover:${tailwindClasses.primary.text.replace('text-', '')} transition-colors duration-200 text-left`}
                   >
                     Dashboard
                   </button>
                   <button
                     onClick={handleAuth}
-                    className="bg-forest text-white px-6 py-2 rounded-full hover:bg-moss transition-colors duration-200 text-center"
+                    className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors duration-200 text-center"
                   >
                     Logout
                   </button>
