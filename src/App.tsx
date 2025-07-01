@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
+import JeanGrey from "./pages/JeanGrey";
 import { RecurringSessionsSetup } from "./components/client/recurring-sessions";
 
 const queryClient = new QueryClient();
@@ -62,6 +63,7 @@ const App = () => {
                       </ProtectedRoute>
                     }
                   />
+                  <Route path="/jean-grey" element={<JeanGrey />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
