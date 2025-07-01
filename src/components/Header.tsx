@@ -51,7 +51,7 @@ const Header = () => {
     <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-peach">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
+          <Link to="/jean-grey" className="flex items-center">
             <img
               src={logoImage}
               className="h-12 w-auto"
