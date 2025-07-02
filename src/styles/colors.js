@@ -6,14 +6,14 @@
 export const colors = {
   // Primary brand colors from logo
   orange: {
-    light: "hsl(14, 89%, 65%)",
-    DEFAULT: "hsl(14, 89%, 55%)",
-    dark: "hsl(14, 89%, 45%)",
+    light: "hsl(28, 95%, 75%)",
+    DEFAULT: "hsl(28, 95%, 65%)",
+    dark: "hsl(28, 95%, 55%)",
   },
   tangerine: {
-    light: "hsl(28, 95%, 65%)",
-    DEFAULT: "hsl(28, 95%, 55%)",
-    dark: "hsl(28, 95%, 45%)",
+    light: "hsl(28, 95%, 80%)",
+    DEFAULT: "hsl(28, 95%, 70%)",
+    dark: "hsl(28, 95%, 60%)",
   },
   peach: {
     light: "hsl(35, 100%, 85%)",
@@ -85,8 +85,8 @@ export const theme = {
     buttonHover: colors.orange.dark,
     heading: colors.orange.DEFAULT,
     text: colors.orange.DEFAULT,
-    background: colors.orange.DEFAULT,
-    backgroundLight: `${colors.orange.DEFAULT}/10`,
+    background: colors.orange.light,
+    backgroundLight: `${colors.orange.light}/10`,
   },
   
   // Secondary colors for secondary buttons and accents
@@ -94,8 +94,8 @@ export const theme = {
     button: colors.tangerine.DEFAULT,
     buttonHover: colors.tangerine.dark,
     text: colors.tangerine.DEFAULT,
-    background: colors.tangerine.DEFAULT,
-    backgroundLight: `${colors.tangerine.DEFAULT}/10`,
+    background: colors.tangerine.light,
+    backgroundLight: `${colors.tangerine.light}/10`,
   },
 
   // Navigation and interactive elements
@@ -108,14 +108,14 @@ export const theme = {
   // Backgrounds and gradients
   background: {
     hero: `from-${colors.peach.light} to-white`,
-    section: colors.sage.DEFAULT + "/10",
+    section: colors.orange.light + "/10",
     card: "white",
   },
 
   // Bullet points and small accents
   accent: {
     bullet: colors.orange.DEFAULT,
-    badge: colors.orange.DEFAULT + "/90",
+    badge: colors.orange.light + "/90",
   },
 };
 
@@ -143,11 +143,13 @@ export const tailwindClasses = {
     bg: "bg-orange hover:bg-orange-dark",
     text: "text-orange",
     border: "border-orange",
+    hover: "hover:text-orange hover:border-orange",
   },
   secondary: {
     bg: "bg-tangerine hover:bg-tangerine-dark",
     text: "text-tangerine",
     border: "border-tangerine",
+    hover: "hover:text-tangerine hover:border-tangerine",
   },
   zoom: {
     bg: "bg-blue-600 hover:bg-blue-700",
@@ -160,9 +162,9 @@ export const tailwindClasses = {
     border: "border-green-600",
   },
   warning: {
-    bg: "bg-orange-600 hover:bg-orange-700",
-    text: "text-orange-600",
-    border: "border-orange-600",
+    bg: "bg-orange hover:bg-orange-dark",
+    text: "text-orange",
+    border: "border-orange",
   },
   danger: {
     bg: "bg-red-600 hover:bg-red-700",
