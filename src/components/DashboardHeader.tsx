@@ -34,6 +34,7 @@ import clientAvatar from "@/assets/images/client-avatar.png";
 // Using our local client avatar image
 const clientProfileImage = clientAvatar;
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface DashboardHeaderProps {
   // Props for recurring sessions setup mode
@@ -234,13 +235,13 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
           <nav className="flex items-center justify-between">
             {/* Left: Logo */}
             <div className="flex items-center flex-shrink-0">
-              <a href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <img
                   src={logoImage}
                   alt="Jean Grey"
                   className="h-16 w-auto object-contain"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Center: Progress Section - Taking up maximum available space */}
@@ -284,13 +285,13 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
           <nav className="flex items-center justify-between">
             {/* Logo - Always shown */}
             <div className="flex items-center">
-              <a href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <img
                   src={logoImage}
                   alt="Jean Grey"
                   className="h-16 w-auto object-contain"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Normal Mode: Notifications and Profile */}
