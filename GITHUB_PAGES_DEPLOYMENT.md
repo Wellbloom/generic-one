@@ -2,14 +2,14 @@
 
 ## 📋 Prerequisites
 
-- Your code is pushed to GitHub repository `wellbloom/home`
+- Your code is pushed to GitHub repository `Wellbloom/generic-one`
 - You have admin access to the repository
 
 ## 🚀 Deployment Steps
 
 ### 1. Enable GitHub Pages
 
-1. Go to your repository on GitHub: `https://github.com/wellbloom/home`
+1. Go to your repository on GitHub: `https://github.com/Wellbloom/generic-one`
 2. Click on **Settings** tab
 3. Scroll down to **Pages** section in the left sidebar
 4. Under **Source**, select **GitHub Actions**
@@ -33,7 +33,7 @@ git push origin main
 ### 4. Access Your Site
 
 Once deployment is complete, your site will be available at:
-**https://wellbloom.github.io/home/**
+**https://wellbloom.github.io/generic-one/**
 
 ## 🛠️ What Was Set Up
 
@@ -42,7 +42,7 @@ Once deployment is complete, your site will be available at:
    - Deploys the built files to GitHub Pages
 
 2. **Vite Configuration** (`vite.config.ts`):
-   - Updated to use correct base URL for GitHub Pages (`/home/`)
+   - Updated to use correct base URL for GitHub Pages (`/generic-one/`)
    - Ensures all assets load correctly
 
 3. **Routing Configuration**:
@@ -61,8 +61,8 @@ This will still work on `http://localhost:8080` as before.
 ## 📱 Testing
 
 After deployment, test these URLs:
-- `https://wellbloom.github.io/home/` - Main landing page
-- `https://wellbloom.github.io/home/jean-grey` - Jean Grey specific page
+- `https://wellbloom.github.io/generic-one/` - Main landing page
+- `https://wellbloom.github.io/generic-one/jean-grey` - Jean Grey specific page
 
 ## 🚨 Troubleshooting
 
@@ -72,7 +72,7 @@ After deployment, test these URLs:
 3. Ensure your `package.json` has the correct build scripts
 
 ### If pages don't load correctly:
-1. Make sure the base URL in `vite.config.ts` is set to `/home/`
+1. Make sure the base URL in `vite.config.ts` is set to `/generic-one/`
 2. Check that all asset paths are relative
 
 ### If routing doesn't work:
@@ -89,7 +89,7 @@ After deployment, test these URLs:
 
 1. Push your changes to GitHub
 2. Check the Actions tab for deployment status
-3. Visit your live site at `https://wellbloom.github.io/home/`
+3. Visit your live site at `https://wellbloom.github.io/generic-one/`
 4. Test all functionality on the deployed site
 
 Your React app is now set up for automatic deployment to GitHub Pages! 🎉 
