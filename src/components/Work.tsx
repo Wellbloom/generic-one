@@ -11,220 +11,93 @@ const Work = () => {
   const [currentCategory, setCurrentCategory] = useState("All");
 
   const workSamples = [
-    // Dance & Movement Therapy
     {
       id: 1,
-      category: "Dance & Movement Therapy",
-      title: "Healing Through Sacred Movement",
+      category: "Podcast",
+      title: "Wellness Wednesday Podcast",
       excerpt:
-        "Exploring how traditional dance forms can unlock emotional healing and create pathways to self-discovery through embodied expression...",
+        "Weekly podcast exploring holistic wellness, mental health tips, and inspiring guest stories.",
       fullContent:
-        "A comprehensive exploration of how movement therapy integrates with traditional therapeutic practices to create profound healing experiences.",
+        "Join Jean Grey every Wednesday for insightful conversations on mental health, self-care, and integrative wellness with expert guests and real-life stories.",
       image:
-        "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80",
-      date: "March 2024",
-      readTime: "5 min read",
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
     },
     {
       id: 2,
-      category: "Dance & Movement Therapy",
-      title: "Body Wisdom: Listening to Physical Trauma",
+      category: "Mindfulness",
+      title: "Mindfulness & Meditation Classes",
       excerpt:
-        "Understanding how trauma manifests in the body and using movement to process and release stored emotional energy...",
+        "Guided mindfulness and meditation sessions to help you find calm, clarity, and resilience.",
       fullContent:
-        "A deep dive into somatic experiencing and how movement therapy helps clients reconnect with their body's innate wisdom.",
+        "Experience the benefits of mindfulness and meditation in a supportive group setting. Learn practical techniques for stress reduction and emotional balance.",
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&q=80",
-      date: "February 2024",
-      readTime: "7 min read",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
     },
     {
       id: 3,
-      category: "Dance & Movement Therapy",
-      title: "Rhythm as Medicine: Cultural Movement Healing",
+      category: "Workshops",
+      title: "Anxiety Management Workshop",
       excerpt:
-        "Integrating cultural dance traditions into therapeutic practice to honor heritage while fostering healing and connection...",
+        "Interactive workshop offering tools and strategies to manage anxiety and build coping skills.",
       fullContent:
-        "Exploring how cultural movement practices can be integrated into modern therapy to create culturally responsive healing.",
+        "This workshop provides evidence-based techniques for understanding and managing anxiety, including cognitive-behavioral tools and relaxation exercises.",
       image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=400&q=80",
-      date: "January 2024",
-      readTime: "6 min read",
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
     },
     {
       id: 4,
-      category: "Dance & Movement Therapy",
-      title: "Movement Meditation for Anxiety Relief",
+      category: "Seminars",
+      title: "Relationship Skills Seminar",
       excerpt:
-        "Combining gentle movement with mindfulness practices to create accessible tools for managing anxiety and stress...",
+        "Learn effective communication, conflict resolution, and emotional intelligence for healthier relationships.",
       fullContent:
-        "A practical guide to using movement meditation as a therapeutic intervention for anxiety and stress management.",
+        "This seminar is designed to help individuals and couples develop the skills needed for strong, fulfilling relationships.",
       image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
-      date: "December 2023",
-      readTime: "4 min read",
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
     },
-
-    // Art & Creative Expression
     {
       id: 5,
-      category: "Art & Creative Expression",
-      title: "Colors of Emotion: Art Therapy Techniques",
+      category: "Groups",
+      title: "Group Therapy Sessions",
       excerpt:
-        "Using color psychology and artistic expression to help clients process complex emotions that are difficult to verbalize...",
+        "Supportive group sessions for shared healing, connection, and personal growth.",
       fullContent:
-        "An exploration of how art therapy creates safe spaces for emotional expression and psychological healing.",
+        "Join a safe, confidential group environment to explore challenges, share experiences, and build resilience together.",
       image:
-        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=400&q=80",
-      date: "March 2024",
-      readTime: "5 min read",
+        "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80",
     },
     {
       id: 6,
-      category: "Art & Creative Expression",
-      title: "Creative Journaling for Self-Discovery",
+      category: "Courses",
+      title: "Self-Esteem Building Course",
       excerpt:
-        "Combining writing, drawing, and collage techniques to create powerful tools for self-reflection and personal growth...",
+        "A structured course to help you develop confidence, self-worth, and a positive self-image.",
       fullContent:
-        "A comprehensive guide to therapeutic journaling practices that integrate multiple creative modalities.",
+        "Through interactive lessons and exercises, this course empowers you to overcome self-doubt and embrace your strengths.",
       image:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&q=80",
-      date: "February 2024",
-      readTime: "6 min read",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
     },
     {
       id: 7,
-      category: "Art & Creative Expression",
-      title: "Mandala Making as Therapeutic Practice",
+      category: "Support Groups",
+      title: "Trauma Recovery Support Group",
       excerpt:
-        "Exploring the meditative and healing properties of mandala creation in individual and group therapy settings...",
+        "A safe space for survivors to share, heal, and support each other on the journey to recovery.",
       fullContent:
-        "Understanding how mandala creation facilitates mindfulness, self-awareness, and emotional regulation.",
+        "Facilitated by Jean Grey, this group offers trauma-informed support and practical tools for healing.",
       image:
-        "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=400&q=80",
-      date: "January 2024",
-      readTime: "7 min read",
+        "https://images.unsplash.com/photo-1515168833906-d2a3b82b302b?auto=format&fit=crop&w=400&q=80",
     },
     {
       id: 8,
-      category: "Art & Creative Expression",
-      title: "Digital Art Therapy for Modern Healing",
+      category: "Creative Workshops",
+      title: "Creative Expression Workshops",
       excerpt:
-        "Adapting traditional art therapy techniques for digital platforms while maintaining therapeutic integrity...",
+        "Explore art, music, and movement as pathways to self-discovery and emotional release.",
       fullContent:
-        "Exploring how technology can expand access to art therapy while preserving its essential healing qualities.",
+        "These workshops use creative modalities to foster healing, self-awareness, and personal growth in a supportive environment.",
       image:
-        "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=400&q=80",
-      date: "December 2023",
-      readTime: "5 min read",
-    },
-
-    // Mindfulness & Meditation
-    {
-      id: 9,
-      category: "Mindfulness & Meditation",
-      title: "Breathwork for Emotional Regulation",
-      excerpt:
-        "Teaching clients powerful breathing techniques to manage overwhelming emotions and create inner calm...",
-      fullContent:
-        "A practical exploration of how breathwork can be integrated into therapy for emotional regulation and stress management.",
-      image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
-      date: "March 2024",
-      readTime: "6 min read",
-    },
-    {
-      id: 10,
-      category: "Mindfulness & Meditation",
-      title: "Walking Meditation in Nature Therapy",
-      excerpt:
-        "Combining the healing power of nature with mindful walking practices for grounding and peace...",
-      fullContent:
-        "Understanding how nature-based mindfulness practices can enhance therapeutic outcomes and well-being.",
-      image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400&q=80",
-      date: "February 2024",
-      readTime: "5 min read",
-    },
-    {
-      id: 11,
-      category: "Mindfulness & Meditation",
-      title: "Body Scan Meditation for Trauma Recovery",
-      excerpt:
-        "Using gentle body awareness practices to help trauma survivors reconnect safely with their physical selves...",
-      fullContent:
-        "A trauma-informed approach to body scan meditation that prioritizes safety and gradual reconnection.",
-      image:
-        "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=400&q=80",
-      date: "January 2024",
-      readTime: "8 min read",
-    },
-    {
-      id: 12,
-      category: "Mindfulness & Meditation",
-      title: "Loving-Kindness Practice for Self-Compassion",
-      excerpt:
-        "Cultivating self-compassion through loving-kindness meditation to heal inner criticism and shame...",
-      fullContent:
-        "Exploring how loving-kindness meditation can transform self-relationship and promote healing from within.",
-      image:
-        "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=80",
-      date: "December 2023",
-      readTime: "4 min read",
-    },
-
-    // Trauma-Informed Care
-    {
-      id: 13,
-      category: "Trauma-Informed Care",
-      title: "Creating Safety in Therapeutic Spaces",
-      excerpt:
-        "Essential principles for establishing physical and emotional safety in trauma-informed therapeutic practice...",
-      fullContent:
-        "A comprehensive guide to creating therapeutic environments that support healing from trauma with dignity and respect.",
-      image:
-        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80",
-      date: "March 2024",
-      readTime: "7 min read",
-    },
-    {
-      id: 14,
-      category: "Trauma-Informed Care",
-      title: "EMDR Integration with Somatic Methods",
-      excerpt:
-        "Combining EMDR therapy with body-based approaches for comprehensive trauma treatment...",
-      fullContent:
-        "Understanding how EMDR can be enhanced with somatic experiencing for more complete trauma resolution.",
-      image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&q=80",
-      date: "February 2024",
-      readTime: "9 min read",
-    },
-    {
-      id: 15,
-      category: "Trauma-Informed Care",
-      title: "Cultural Trauma and Healing Practices",
-      excerpt:
-        "Addressing intergenerational and cultural trauma through culturally responsive therapeutic approaches...",
-      fullContent:
-        "Exploring how cultural trauma manifests and how culturally informed practices can facilitate healing.",
-      image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80",
-      date: "January 2024",
-      readTime: "8 min read",
-    },
-    {
-      id: 16,
-      category: "Trauma-Informed Care",
-      title: "Building Resilience After Trauma",
-      excerpt:
-        "Supporting clients in developing post-traumatic growth and resilience through integrated therapeutic approaches...",
-      fullContent:
-        "A framework for supporting clients in not just surviving trauma, but thriving and growing beyond it.",
-      image:
-        "https://images.unsplash.com/photo-1502781252888-9143ba7f074e?auto=format&fit=crop&w=400&q=80",
-      date: "December 2023",
-      readTime: "6 min read",
+        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
     },
   ];
 
@@ -336,12 +209,6 @@ const Work = () => {
 
                   {/* Card Content */}
                   <div className="p-6">
-                    <div className="flex items-center text-sm text-moss/60 mb-3">
-                      <span>{work.date}</span>
-                      <span className="mx-2">•</span>
-                      <span>{work.readTime}</span>
-                    </div>
-
                     <h3 className="text-xl font-serif font-bold bg-gradient-to-r from-orange to-orange-dark bg-clip-text text-transparent mb-3 line-clamp-2">
                       {work.title}
                     </h3>
@@ -349,11 +216,6 @@ const Work = () => {
                     <p className="text-moss/80 mb-4 line-clamp-3">
                       {work.excerpt}
                     </p>
-
-                    <button className={`flex items-center ${tailwindClasses.primary.text} hover:text-orange-dark transition-colors duration-200 font-medium group`}>
-                      Read More
-                      <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                    </button>
                   </div>
                 </div>
               ))}
